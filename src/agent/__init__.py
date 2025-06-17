@@ -3,6 +3,6 @@
 This module defines a custom graph.
 """
 
-from agent.graph import graph
+from agent.petra_agent import graph
 
 __all__ = ["graph"]
