@@ -1,6 +1,5 @@
 from agent.schema import State
 from langgraph.graph import StateGraph, END, START
-from langgraph.checkpoint.sqlite import SqliteSaver
 from agent.nodes import *
 
 # --- Graph Construction ---
@@ -34,4 +33,4 @@ builder.add_edge("execute_prompts", "count_brand_mentions")
 builder.add_edge("count_brand_mentions", END)
 
 # Compile the graph
-graph = builder.compile(checkpointer=SqliteSaver.from_conn_string("sqlite:///petra_agent.db"))
+graph = builder.compile()

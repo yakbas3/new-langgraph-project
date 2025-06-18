@@ -63,12 +63,6 @@ def generate_perspectives(state: State) -> State:
     state.messages.append(AIMessage(content=f"Generated {len(result.perspectives)} perspectives"))
     return state
 
-def human_feedback_node(state: State) -> State:
-    return state
-
-def human_feedback_node2(state: State) -> State:
-    return state
-
 def generate_prompts_for_perspective(state: dict) -> dict:
     """Receives a dictionary payload from Send() and generates prompts."""
     # Use dictionary key access instead of attribute access
